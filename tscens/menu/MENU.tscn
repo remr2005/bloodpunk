@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://buwj3ebqd1wg"]
+[gd_scene load_steps=3 format=3 uid="uid://buwj3ebqd1wg"]
 
 [ext_resource type="Script" path="res://tscens/menu/QUIT.cs" id="1_y6km1"]
+[ext_resource type="Script" path="res://tscens/menu/SETTINGS.cs" id="2_2rghp"]
 
 [node name="MENU" type="Node"]
 
@@ -25,5 +26,7 @@ offset_top = 217.0
 offset_right = 719.0
 offset_bottom = 267.0
 text = "SETTINGS"
+script = ExtResource("2_2rghp")
 
 [connection signal="pressed" from="QUIT" to="QUIT" method="_on_pressed"]
+[connection signal="pressed" from="SETTINGS" to="QUIT" method="_on_settings_pressed"]

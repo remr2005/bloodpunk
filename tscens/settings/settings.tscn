@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dys2knlsc2i48"]
+
+[ext_resource type="Script" path="res://tscens/settings/BACK.cs" id="1_48aqx"]
+
+[node name="Settings" type="Node"]
+
+[node name="BACK" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 555.0
+offset_right = 166.0
+offset_bottom = 605.0
+text = "BACK"
+script = ExtResource("1_48aqx")
+
+[connection signal="pressed" from="BACK" to="BACK" method="_on_pressed"]
