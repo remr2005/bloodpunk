@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://buwj3ebqd1wg"]
+
+[ext_resource type="Script" path="res://tscens/menu/QUIT.cs" id="1_y6km1"]
+
+[node name="MENU" type="Node"]
+
+[node name="SPACEBATTLE" type="Button" parent="."]
+offset_left = 422.0
+offset_top = 137.0
+offset_right = 722.0
+offset_bottom = 187.0
+text = "SPACEBATTLE"
+
+[node name="QUIT" type="Button" parent="."]
+offset_left = 423.0
+offset_top = 313.0
+offset_right = 723.0
+offset_bottom = 363.0
+text = "QUIT"
+script = ExtResource("1_y6km1")
+
+[node name="SETTINGS" type="Button" parent="."]
+offset_left = 419.0
+offset_top = 217.0
+offset_right = 719.0
+offset_bottom = 267.0
+text = "SETTINGS"
+
+[connection signal="pressed" from="QUIT" to="QUIT" method="_on_pressed"]
