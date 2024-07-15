@@ -7,9 +7,14 @@ public partial class Ship : RigidBody2D
 
     public Vector2 ScreenSize;
 
-	private bool choose = false;
+	private float gip;
+
+
+    private bool choose = false;
 
 	private bool action_ = false;
+
+	private Vector2 startpos;
 
 	private Vector2 newpos;
 
@@ -28,19 +33,33 @@ public partial class Ship : RigidBody2D
 		}
 		if (Input.IsActionPressed("Right_Mouse") && choose && !action_)
 		{
-            float gip = (float)Math.Sqrt(Math.Pow(newpos.X - Position.X, 2) + Math.Pow(newpos.Y - Position.Y, 2));
+            gip = (float)Math.Sqrt(Math.Pow(newpos.X - Position.X, 2) + Math.Pow(newpos.Y - Position.Y, 2));
 			newpos = GetGlobalMousePosition();
-			procent.X = (newpos.X - Position.X) / gip;
+            startpos.X = Position.X;
+            startpos.Y = Position.Y;
+            procent.X = (newpos.X - Position.X) / gip;
 			procent.Y = (newpos.Y - Position.Y) / gip;
-			var velocity = Vector2.Zero;
-			velocity.X = procent.X;
-			velocity.Y = procent.Y;
-			velocity = velocity.Normalized() * speed;
 			action_ = true;
 		}
-		if (action_)
+        GD.Print(GlobalPosition.X);
+        if (action_)
 		{
-			var Sprite2D = GetNode<Sprite2D>("Sprite2D");
+            var velocity = Vector2.Zero;
+            var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+            GD.Print(GlobalPosition.X);
+            velocity.X += (newpos.X - Position.X) / gip;
+            velocity.Y += (newpos.Y - Position.Y) / gip;
+            velocity = velocity.Normalized() * speed;
+            animatedSprite2D.Play();
+            Position += velocity * (float)delta;
+            Position = new Vector2(
+                x: Mathf.Clamp(Position.X, 0, ScreenSize.X),
+                y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y)
+            );
+			GD.Print(GlobalPosition.X);
+			action_ = false;
         }
-	}
+        GD.Print(startpos.X);
+        GD.Print(startpos.X);
+    }
 }

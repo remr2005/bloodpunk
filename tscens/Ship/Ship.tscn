@@ -1,7 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://busrr2cbnlfmm"]
+[gd_scene load_steps=5 format=3 uid="uid://busrr2cbnlfmm"]
 
 [ext_resource type="Script" path="res://tscens/Ship/Ship.cs" id="1_6m6kc"]
 [ext_resource type="Texture2D" uid="uid://dqwwbyp7t14t4" path="res://Art/ship.png" id="1_pvla7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j1fq7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pvla7")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_obgcr"]
 radius = 20.0
@@ -11,9 +22,10 @@ height = 44.0
 gravity_scale = 0.0
 script = ExtResource("1_6m6kc")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("1_pvla7")
+sprite_frames = SubResource("SpriteFrames_j1fq7")
+animation = &"fly"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
