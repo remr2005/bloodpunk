@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diu3uwncfem66"
-path="res://.godot/imported/WollLowQ (2).png-19fc16a45d66db9ef2a0749ea5688e92.ctex"
+uid="uid://dil31dkpwj081"
+path="res://.godot/imported/WollLowQ[SpriteList].png-e073aba24861b94cd6a81b36dcb28f56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tiles/WollLowQ (2).png"
-dest_files=["res://.godot/imported/WollLowQ (2).png-19fc16a45d66db9ef2a0749ea5688e92.ctex"]
+source_file="res://Sprites/Tiles/Walls/WollLowQ[SpriteList].png"
+dest_files=["res://.godot/imported/WollLowQ[SpriteList].png-e073aba24861b94cd6a81b36dcb28f56.ctex"]
 
 [params]
 
