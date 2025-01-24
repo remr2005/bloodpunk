@@ -5,28 +5,37 @@
 
 [node name="MENU" type="Node"]
 
-[node name="SPACEBATTLE" type="Button" parent="."]
+[node name="CONTINUE" type="Button" parent="."]
 offset_left = 422.0
-offset_top = 137.0
+offset_top = 240.0
 offset_right = 722.0
-offset_bottom = 187.0
+offset_bottom = 290.0
+scale = Vector2(0.996135, 1)
+text = "CONTINUE"
+
+[node name="START" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 170.0
+offset_right = 724.0
+offset_bottom = 220.0
+scale = Vector2(0.996135, 1)
 text = "SPACEBATTLE"
 
-[node name="QUIT" type="Button" parent="."]
-offset_left = 423.0
-offset_top = 313.0
-offset_right = 723.0
-offset_bottom = 363.0
-text = "QUIT"
-script = ExtResource("1_y6km1")
-
 [node name="SETTINGS" type="Button" parent="."]
-offset_left = 419.0
-offset_top = 217.0
-offset_right = 719.0
-offset_bottom = 267.0
+offset_left = 423.0
+offset_top = 318.0
+offset_right = 723.0
+offset_bottom = 368.0
 text = "SETTINGS"
 script = ExtResource("2_2rghp")
 
-[connection signal="pressed" from="QUIT" to="QUIT" method="_on_pressed"]
+[node name="QUIT" type="Button" parent="."]
+offset_left = 423.0
+offset_top = 389.0
+offset_right = 723.0
+offset_bottom = 439.0
+text = "QUIT"
+script = ExtResource("1_y6km1")
+
 [connection signal="pressed" from="SETTINGS" to="QUIT" method="_on_settings_pressed"]
+[connection signal="pressed" from="QUIT" to="QUIT" method="_on_pressed"]
