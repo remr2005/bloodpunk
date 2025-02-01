@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hf6eo6ujt6in"
-path="res://.godot/imported/AtomicGenerator[Coll].png-1bed0d9f149e895e08e302ac492f36e3.ctex"
+uid="uid://dl5b1vvr3r76b"
+path="res://.godot/imported/AtomicGenerator[Hot].png-3eba2214cb364c6b9eb45ee6f1967d21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/objects/resurce_generation/AtomicGenerator[Coll].png"
-dest_files=["res://.godot/imported/AtomicGenerator[Coll].png-1bed0d9f149e895e08e302ac492f36e3.ctex"]
+source_file="res://Sprites/objects/machines/AtomicGenerator[Hot].png"
+dest_files=["res://.godot/imported/AtomicGenerator[Hot].png-3eba2214cb364c6b9eb45ee6f1967d21.ctex"]
 
 [params]
 
